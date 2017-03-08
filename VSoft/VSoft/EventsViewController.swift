@@ -35,7 +35,7 @@ extension EventsViewController: UISearchBarDelegate {
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         searchActive = true;
     }
-    
+
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         searchActive = false;
     }
@@ -55,11 +55,11 @@ extension EventsViewController: UISearchBarDelegate {
             let range = tmp.range(of: searchText, options:.caseInsensitive)
             return (range != nil)
         })
-        if(filtered.count == 0){
-            searchActive = false;
-        } else {
-            searchActive = true;
+        
+        if(searchText == "") {
+            searchActive = false
         }
+
         DispatchQueue.main.async{
             self.mEventsTableView.reloadData()
         }
@@ -88,7 +88,7 @@ extension EventsViewController: UITableViewDataSource {
         } else {
             cell.buildUI(event: events[row])
         }
-        
+        cell.layoutIfNeeded()
         return cell
     }
 }

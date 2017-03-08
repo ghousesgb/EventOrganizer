@@ -21,6 +21,8 @@ class EventTableViewCell: UITableViewCell {
     @IBOutlet weak var mSpeakerStackView: UIStackView!
     @IBOutlet weak var mBuildingStackView: UIStackView!
     
+    @IBOutlet weak var mVenueDisplayLabel: UILabel!
+    @IBOutlet weak var mNameDisplayLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,8 +35,15 @@ class EventTableViewCell: UITableViewCell {
         mNameLabel.text          =   event.mName    as String
         mSpeakerLabel.text       =   event.mSpeaker as String
         mBuildingNameLabel.text  =   event.mBuildingName as String
+        mVenueStackView.isHidden    = false
+        mNameStackView.isHidden     = false
+        mSpeakerStackView.isHidden  = false
+        mBuildingStackView.isHidden = false
         
-        /*if(event.mVenue == "") {
+        mVenueDisplayLabel.sizeToFit()
+        mNameDisplayLabel.sizeToFit()
+        
+        if(event.mVenue == "") {
             mVenueStackView.isHidden = true
         }
         if event.mName == "" {
@@ -45,7 +54,7 @@ class EventTableViewCell: UITableViewCell {
         }
         if event.mBuildingName == "" {
             mBuildingStackView.isHidden = true
-        }*/
+        }
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
