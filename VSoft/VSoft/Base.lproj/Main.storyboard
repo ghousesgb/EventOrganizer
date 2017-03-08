@@ -167,7 +167,6 @@
                                                         <constraint firstItem="jjU-Ct-YxA" firstAttribute="top" secondItem="hGH-Kz-4Ec" secondAttribute="bottom" constant="5" id="O7p-Pw-DHR"/>
                                                         <constraint firstItem="W4f-w2-TFi" firstAttribute="top" secondItem="jjU-Ct-YxA" secondAttribute="bottom" constant="5" id="RlL-0X-qLb"/>
                                                         <constraint firstItem="wTa-jm-bSx" firstAttribute="top" secondItem="W4f-w2-TFi" secondAttribute="bottom" constant="5" id="ZOl-T8-IBD"/>
-                                                        <constraint firstAttribute="bottom" secondItem="9CV-qU-cNW" secondAttribute="bottom" id="nbm-ls-6Bw"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
@@ -204,7 +203,7 @@
                                 </connections>
                             </searchBar>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fiE-1j-l3U" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6KH-n6-UQv"/>
                             <constraint firstAttribute="trailing" secondItem="fMN-uJ-Z8K" secondAttribute="trailing" id="C2S-6g-yMM"/>
