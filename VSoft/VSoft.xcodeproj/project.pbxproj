@@ -333,6 +333,7 @@
 				C88F2D281E700EF6000E3B61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
