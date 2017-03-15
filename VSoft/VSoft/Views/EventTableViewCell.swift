@@ -35,6 +35,7 @@ class EventTableViewCell: UITableViewCell {
         mNameLabel.text          =   event.mName    as String
         mSpeakerLabel.text       =   event.mSpeaker as String
         mBuildingNameLabel.text  =   event.mBuildingName as String
+        
         mVenueStackView.isHidden    = false
         mNameStackView.isHidden     = false
         mSpeakerStackView.isHidden  = false

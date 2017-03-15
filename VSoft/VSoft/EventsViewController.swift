@@ -95,7 +95,6 @@ extension EventsViewController: UITableViewDataSource {
 
 extension EventsViewController {
     func makeRequest() -> Void {
-        
         var config                              :URLSessionConfiguration!
         var urlSession                          :URLSession!
         
@@ -107,9 +106,7 @@ extension EventsViewController {
         let HTTPMethod_Get                      = "GET"
         
         let callURL = URL.init(string: "https://mobileapps.vsoftconsulting.com:8443/TechFestEventWS/rest/events")
-        
         var request = URLRequest.init(url: callURL!)
-        
         request.timeoutInterval = 60.0 // TimeoutInterval in Second
         request.cachePolicy = URLRequest.CachePolicy.reloadIgnoringLocalCacheData
         request.addValue(ContentType_ApplicationJson, forHTTPHeaderField: HTTPHeaderField_ContentType)
