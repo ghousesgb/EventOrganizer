@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C82A3E501E7B8ABD00C9AB18 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82A3E4F1E7B8ABD00C9AB18 /* LoginViewController.swift */; };
+		C82A3E521E7BA8E800C9AB18 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82A3E511E7BA8E800C9AB18 /* HomeViewController.swift */; };
+		C82A3E561E7BAB3C00C9AB18 /* FriendsListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82A3E551E7BAB3C00C9AB18 /* FriendsListCollectionViewCell.swift */; };
+		C82A3E581E7BAD1700C9AB18 /* FriendList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82A3E571E7BAD1700C9AB18 /* FriendList.swift */; };
 		C88F2D181E700EF6000E3B61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88F2D171E700EF6000E3B61 /* AppDelegate.swift */; };
 		C88F2D1D1E700EF6000E3B61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C88F2D1B1E700EF6000E3B61 /* Main.storyboard */; };
 		C88F2D1F1E700EF6000E3B61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C88F2D1E1E700EF6000E3B61 /* Assets.xcassets */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C82A3E4F1E7B8ABD00C9AB18 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C82A3E511E7BA8E800C9AB18 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C82A3E551E7BAB3C00C9AB18 /* FriendsListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListCollectionViewCell.swift; sourceTree = "<group>"; };
+		C82A3E571E7BAD1700C9AB18 /* FriendList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FriendList.swift; path = Model/FriendList.swift; sourceTree = "<group>"; };
 		C88F2D141E700EF6000E3B61 /* VSoft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VSoft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C88F2D171E700EF6000E3B61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C88F2D1C1E700EF6000E3B61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,7 +72,9 @@
 				C88F2D2E1E7012DE000E3B61 /* Utilities */,
 				C88F2D291E700F5B000E3B61 /* Model */,
 				C88F2D171E700EF6000E3B61 /* AppDelegate.swift */,
+				C82A3E511E7BA8E800C9AB18 /* HomeViewController.swift */,
 				C88F2D2C1E701139000E3B61 /* EventsViewController.swift */,
+				C82A3E4F1E7B8ABD00C9AB18 /* LoginViewController.swift */,
 				C88F2D1B1E700EF6000E3B61 /* Main.storyboard */,
 				C88F2D1E1E700EF6000E3B61 /* Assets.xcassets */,
 				C88F2D201E700EF6000E3B61 /* LaunchScreen.storyboard */,
@@ -77,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				C88F2D2A1E700F80000E3B61 /* Events.swift */,
+				C82A3E571E7BAD1700C9AB18 /* FriendList.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -93,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				C88F2D341E701403000E3B61 /* EventTableViewCell.swift */,
+				C82A3E551E7BAB3C00C9AB18 /* FriendsListCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,10 +181,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C82A3E501E7B8ABD00C9AB18 /* LoginViewController.swift in Sources */,
 				C88F2D2B1E700F80000E3B61 /* Events.swift in Sources */,
+				C82A3E581E7BAD1700C9AB18 /* FriendList.swift in Sources */,
 				C88F2D2D1E701139000E3B61 /* EventsViewController.swift in Sources */,
 				C88F2D301E7012FA000E3B61 /* Utilities.swift in Sources */,
+				C82A3E561E7BAB3C00C9AB18 /* FriendsListCollectionViewCell.swift in Sources */,
 				C88F2D351E701403000E3B61 /* EventTableViewCell.swift in Sources */,
+				C82A3E521E7BA8E800C9AB18 /* HomeViewController.swift in Sources */,
 				C88F2D181E700EF6000E3B61 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

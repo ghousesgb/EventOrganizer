@@ -15,7 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        let token = UserDefaults.standard.object(forKey: "TOKEN")
+        if token != nil {
+            let homeVC = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "HomeVC_Navigator") as! UINavigationController
+            
+            let appDelegate = (UIApplication.shared.delegate as! AppDelegate)
+            DispatchQueue.main.async{
+                appDelegate.window?.rootViewController = homeVC
+            }
+        }
+        
         return true
     }
 
