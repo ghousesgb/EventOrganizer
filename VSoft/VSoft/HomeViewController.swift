@@ -16,6 +16,11 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         makeAPICall()
+        performSegue(withIdentifier: "welcomePopupSegue", sender: nil)
+    }
+    
+    @IBAction func leftBarButtonAction(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: "welcomePopupSegue", sender: nil)
     }
     @IBAction func logoutButtoonAction(_ sender: UIBarButtonItem) {
         
@@ -79,7 +84,7 @@ extension HomeViewController {
         let ContentType_ApplicationJson         = "application/json"
         let HTTPMethod_Get                      = "GET"
         
-        let callURL = URL.init(string: "https://reqres.in/api/users")
+        let callURL = URL.init(string: "https://reqres.in/api/users?page=2")
         var request = URLRequest.init(url: callURL!)
         request.timeoutInterval = 60.0 // TimeoutInterval in Second
         request.cachePolicy = URLRequest.CachePolicy.reloadIgnoringLocalCacheData
