@@ -74,41 +74,13 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController {
     func makeAPICall() {
-        var config                              :URLSessionConfiguration!
-        var urlSession                          :URLSession!
-        
-        config = URLSessionConfiguration.default
-        urlSession = URLSession(configuration: config)
-        
-        let HTTPHeaderField_ContentType         = "Content-Type"
-        let ContentType_ApplicationJson         = "application/json"
-        let HTTPMethod_Get                      = "GET"
-        
-        let callURL = URL.init(string: "https://reqres.in/api/users?page=2")
-        var request = URLRequest.init(url: callURL!)
-        request.timeoutInterval = 60.0 // TimeoutInterval in Second
-        request.cachePolicy = URLRequest.CachePolicy.reloadIgnoringLocalCacheData
-        request.addValue(ContentType_ApplicationJson, forHTTPHeaderField: HTTPHeaderField_ContentType)
-        request.httpMethod = HTTPMethod_Get
-        
-        let dataTask = urlSession.dataTask(with: request) { (data,response,error) in
-            if error != nil{
-                return
-            }
-            do {
-                let resultJson = try JSONSerialization.jsonObject(with: data!, options: []) as? [String:AnyObject] //Array<Dictionary<String, String>>
-                print(resultJson)
-                let friendsJson = FriendList()
-                self.mFriendsData = friendsJson.parseJson(json: resultJson!["data"] as! [AnyObject])
-                DispatchQueue.main.async{
-                    self.mFriendsCollectionView.reloadData()
-                }
-            } catch {
-                print("Error -> \(error)")
+        WebSerivceData.makeAPICall(url: "https://reqres.in/api/users?page=2") { (resultJson) in
+        let friendsJson = FriendList()
+            self.mFriendsData = friendsJson.parseJson(json: resultJson["data"] as! [AnyObject])
+            DispatchQueue.main.async{
+                self.mFriendsCollectionView.reloadData()
             }
         }
-        dataTask.resume()
-  
     }
 }
 
@@ -123,6 +95,4 @@ extension HomeViewController : UICollectionViewDataSource {
         cells.buildUI(fList: self.mFriendsData[row])
         return cells
     }
-    
-    
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class GradientViewX: UIView {
+class UIViewX: UIView {
 
     @IBInspectable var FirstColor : UIColor = UIColor.clear {
         didSet {
@@ -25,6 +25,12 @@ class GradientViewX: UIView {
     override class var layerClass: Swift.AnyClass {
         get {
             return CAGradientLayer.self
+        }
+    }
+    @IBInspectable var CornerRadius : CGFloat = 0 {
+        didSet {
+            let layer = self.layer
+            layer.cornerRadius = CornerRadius
         }
     }
     func updateView() {
